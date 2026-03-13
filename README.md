@@ -38,13 +38,34 @@ Deployment
 
 ## Features
 
-- Google authentication
-- Role based authentication i.e user, admin , volunteer
-- NGO listing and exploration
-- Secure donation flow
-- Image display from backend
-- Password reset functionality
-- Responsive UI
+### Authentication
+- Role based authentication i.e user, volunteer and admin
+- Google OAuth login
+- Secure authentication flow with backend JWT handling
+- Password reset interface
+ 
+### NGO Platform
+- Browse NGO initiatives
+- View uploaded NGO images
+- Explore donation campaigns
+
+### Donation System
+- Razorpay payment integration
+- Secure donation workflow
+- Order creation and verification through backend API
+
+### Media Handling
+- Display images uploaded to Cloudinary
+- Optimized image loading from cloud storage
+
+### User Experience
+- Responsive UI for desktop and mobile
+- Dynamic API-driven content
+- Error handling and user feedback
+
+### Security
+- Secure API communication
+- Environment variable configuration
 
 ---
 
