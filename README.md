@@ -85,7 +85,7 @@ VITE_GOOGLE_CLIENT_ID=your_google_client_id
 
 Clone the repository
 
-git clone https://github.com/RahulShukla387/MyProjectAdiYuvanFrontend.git
+git clone https://github.com/RahulShukla387/helpOthersFrontend.git
 
 Navigate to the project directory => cd MyProjectAdiYuvanFrontend
 Install dependencies => npm install
