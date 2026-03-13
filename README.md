@@ -13,6 +13,8 @@ The application communicates with the backend API deployed on Railway and provid
 
 https://helpothers-five.vercel.app
 
+Google login are provided please login to check in detail
+
 **Backend API
 
 https://myprojectadiyuvanbackend-production.up.railway.app
@@ -37,6 +39,7 @@ Deployment
 ## Features
 
 - Google authentication
+- Role based authentication i.e user, admin , volunteer
 - NGO listing and exploration
 - Secure donation flow
 - Image display from backend
