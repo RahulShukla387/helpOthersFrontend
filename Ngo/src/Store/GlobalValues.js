@@ -26,11 +26,12 @@ export const useGlobalStore = create((set, get) => ({
 
 
   getUserData: async () => {
+    console.log("calling get User data");
     try {
       const res = await axios.get(
         backendUrl + "/api/auth/getUserData"
       );
-
+       console.log("getUserData is : ", res);
       if (res.data.success === true) {
         set({
           data: res.data.data,

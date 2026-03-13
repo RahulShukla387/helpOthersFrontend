@@ -16,6 +16,7 @@ import VolunteerFile from './Pages/VolunteerFile.jsx'
 import Notification from './Pages/Notification.jsx'
 import { ToastContainer , toast } from 'react-toastify';
 import Upload from './Pages/Upload.jsx'
+import NotFound from './Pages/NotFound.jsx'
 
 
 axios.defaults.withCredentials = true;
@@ -41,6 +42,7 @@ axios.defaults.withCredentials = true;
         <Route path='/reportIssueFile' element = { <ReportIssueFile/> } />
         <Route path='/notifications' element = { <Notification/> } />
         <Route path='/upload' element = { <Upload/> } />
+        <Route path='*' element = {<NotFound/>} />
 
       </Routes>
 

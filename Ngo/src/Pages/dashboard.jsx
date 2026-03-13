@@ -5,6 +5,7 @@ import Gallery from './Gallery';
 import { Link } from 'react-router-dom';
 import { useGlobalStore } from '../Store/GlobalValues';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { 
   Sun, 
   Leaf, 
@@ -44,12 +45,13 @@ const StatCard = ({img }) => (
 );
 
 
-export default function AdiYuvanDashboard() {
+export default  function AdiYuvanDashboard() {
 
    const loggedIn = useGlobalStore((state) =>state.loggedIn);
    const data = useGlobalStore((state) =>state.data);
    const countVol = useGlobalStore((state) =>state.countVol);
    const countReport = useGlobalStore((state) =>state.countReport);
+   const getUserData = useGlobalStore((s)=> s.getUserData);
   const navigate = useNavigate();
 
   const adminNotification = useGlobalStore((state) => state.getNotificationAdmin);
@@ -144,7 +146,17 @@ const volunteerNotification = useGlobalStore((state) => state.getNotificationVol
   {/* Action Buttons */}
   <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center mt-8">
     <button
-      onClick={() => navigate("/volunteer")}
+      // onClick={() => navigate("/volunteer")}
+       onClick={() =>{
+        if(loggedIn){
+          navigate("/volunteer");
+        }
+        else {
+          toast.warn("Loggin first then try");
+          navigate("/login");
+         
+        }
+      }}
       className="group flex items-center justify-center gap-2 px-8 py-4 bg-green-600 text-white rounded-2xl font-bold shadow-lg shadow-green-200 hover:bg-green-700 hover:-translate-y-1 transition-all duration-200"
     >
       <span>Request for Volunteer </span>
@@ -154,7 +166,17 @@ const volunteerNotification = useGlobalStore((state) => state.getNotificationVol
     </button>
 
     <button
-      onClick={() => navigate("/reportIssue")}
+      // onClick={() => navigate("/reportIssue")}
+      onClick={() =>{
+        if(loggedIn){
+          navigate("/reportIssue");
+        }
+        else{
+          toast.warn("Loggin first then try");
+          navigate("/login");
+          
+        }
+      }}
       className="group flex items-center justify-center gap-2 px-8 py-4 bg-white border-2 border-slate-200 text-slate-700 rounded-2xl font-bold hover:bg-slate-900 hover:text-white hover:border-slate-900 shadow-sm transition-all duration-200"
     >
       <span>Report an Issue Around You</span>

@@ -4,6 +4,9 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { useGlobalStore } from "../Store/GlobalValues";
 import { useNavigate } from "react-router-dom";
+import {useGoogleAuth} from "./GoogleLogin"
+import { GoogleLogin } from "@react-oauth/google";
+
 function Login() {
       const [state, setState] = useState("SignUp");
       const [form , setForm] = useState({
@@ -12,6 +15,7 @@ function Login() {
         password: "",
       })
       const navigate = useNavigate();
+      const googleLogin = useGoogleAuth();
       const setLoggedIn = useGlobalStore((state)=> state.setLoggedIn );
       const backendUrl = useGlobalStore((state)=> state.backendUrl );
       let changeData = async(e)=>{
@@ -41,7 +45,7 @@ function Login() {
  try{
   
         const result = await axios.post(backendUrl + "/api/auth/login", form);
-        console.log(result);
+        // console.log(result);
         if(result.data.success === true){
            setLoggedIn(true);
            setState("Login");
@@ -92,9 +96,6 @@ function Login() {
        
       }
 
-      let googleLogin = async()=>{
-       
-      }
     return ( <>
 {(state == "SignUp")?(
   <div className="flex justify-center items-center min-h-screen bg-slate-50 px-4">
@@ -154,12 +155,37 @@ function Login() {
     {/* Google Button */}
     <button 
       type="button" 
-      onClick={googleLogin} 
+      onClick={()=> googleLogin()} 
       className="w-full flex items-center justify-center gap-3 border border-slate-200 py-2.5 rounded-xl hover:bg-slate-50 font-semibold text-slate-700 transition-all active:scale-[0.98]"
     >
       <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" className="w-5 h-5" alt="Google" />
       Sign in with Google
     </button>
+
+    {/* <GoogleLogin
+  onSuccess={async (credentialResponse) => {
+    console.log("Google Success:", credentialResponse);
+
+    try {
+      const res = await axios.post(
+        backendUrl + "/api/auth/google",
+        { credential: credentialResponse.credential }
+      );
+
+      if (res.data.success) {
+        setLoggedIn(true);
+        toast.success("Google Login Successful");
+      }
+
+    } catch (err) {
+      toast.error("Google login failed");
+    }
+  }}
+  onError={() => {
+    console.log("Login Failed");
+  }}
+/> */}
+
   <div className="flex items-center gap-2 text-sm text-gray-600">
   <p>Already have an account?</p>
 
@@ -226,12 +252,39 @@ function Login() {
     {/* Google Button */}
     <button 
       type="button" 
-      onClick={googleLogin} 
+       onClick={()=> googleLogin()} 
       className="w-full flex items-center justify-center gap-3 border border-slate-200 py-2.5 rounded-xl hover:bg-slate-50 font-semibold text-slate-700 transition-all active:scale-[0.98]"
     >
       <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" className="w-5 h-5" alt="Google" />
       Sign in with Google
     </button>
+
+     
+     {/* <GoogleLogin
+  onSuccess={async (credentialResponse) => {
+    console.log("Google Success:", credentialResponse);
+
+    try {
+      const res = await axios.post(
+        backendUrl + "/api/auth/google",
+        { credential: credentialResponse.credential }
+      );
+
+      if (res.data.success) {
+        setLoggedIn(true);
+        toast.success("Google Login Successful");
+      }
+
+    } catch (err) {
+      toast.error("Google login failed");
+    }
+  }}
+  onError={() => {
+    console.log("Login Failed");
+  }}
+/> */}
+
+
      <div className="mt-6 space-y-4 text-sm">
   {/* Forget Password Section */}
   <div className="flex items-center justify-center gap-2">
