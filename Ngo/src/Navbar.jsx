@@ -126,7 +126,10 @@ const menuItems = loggedIn
   item.action === "logout" ? (
     <button
       key={index}
-      onClick={handleLogout}
+      onClick={()=>{
+        handleLogout()
+        toggleMenu()
+      }}
       className="flex items-center space-x-2 text-slate-600 hover:text-orange-600"
     >
       {item.icon}
@@ -137,6 +140,9 @@ const menuItems = loggedIn
       key={index}
       to={item.to}
       className="flex items-center space-x-2 text-slate-600 hover:text-orange-600"
+       onClick={()=>{
+        toggleMenu()
+      }}
     >
       {item.icon}
       <span>{item.label}</span>

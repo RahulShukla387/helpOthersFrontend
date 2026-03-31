@@ -43,7 +43,7 @@ function ResetPassword() {
         
     }
     let requestOtp = async()=>{
-        let res = await axios.post(backendUrl + "/api/auth/resetPasswordOtp", {email: form.email});
+        let res = await axios.post(backendUrl + "/api/auth/resetPasswordOtp", {email: form.email});        
         console.log(res.data);
         if(res.data.success === true ){
             toast.success(`Otp sent successfully on email ${form.email}`);
@@ -86,7 +86,7 @@ function ResetPassword() {
         <button 
           type="button"
           onClick={requestOtp} 
-          className="px-4 py-2.5 bg-orange-50 text-orange-600 font-semibold rounded-xl hover:bg-orange-100 transition-colors whitespace-nowrap text-sm border border-orange-100"
+          className="px-4 py-2.5 bg-orange-50 text-orange-600 font-semibold rounded-xl hover:bg-orange-100 active:bg-blue-700 transition-colors whitespace-nowrap text-sm border border-orange-100"
         >
           Send OTP
         </button>
