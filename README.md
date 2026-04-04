@@ -13,6 +13,12 @@ The application communicates with the backend API deployed on Railway and provid
 
 https://helpothers-five.vercel.app
 
+for demo purpose 
+email => admin@gmail.com , volunteer@gmail.com , user@gmail.com , 
+password => admin123 , volunteer123 , user123
+username => admin , volunteer , user
+verification code => 123456
+
 Google login are provided please login to check in detail
 
 **Backend API
