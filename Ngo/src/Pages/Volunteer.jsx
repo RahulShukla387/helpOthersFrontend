@@ -67,7 +67,7 @@ function Volunteer() {
         let res = await axios.get(backendUrl + "/api/auth/sendVerifyOtp", {email: form.email});
         console.log(res.data);
         if(res.data.success === true ){
-            toast.success(`Otp sent successfully on email ${data.email}`);
+            toast.success(`${res.data.message}`);
         }
         else{
             toast.error(res.data.message);
