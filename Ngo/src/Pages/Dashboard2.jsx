@@ -16,14 +16,14 @@ import {
 const SEVA_PILLARS = [
   { 
     id: 1, 
-    title: "Mahaprasadam Seva (Food & Relief)", 
+    title: "FOOD", 
     description: "Providing consistent and nutritious community meals (Annadanam) to combat hunger and ensure fundamental well-being for vulnerable populations.", 
     icon: Utensils, 
     color: "bg-emerald-50 text-emerald-600" 
   },
   { 
     id: 2, 
-    title: "Vastra Seva (Clothing Distribution)", 
+    title: "Vastra", 
     description: "Supplying essential clothing and relief materials to protect families, especially during challenging weather conditions.", 
     icon: Shirt, 
     color: "bg-blue-50 text-blue-600" 
@@ -37,7 +37,7 @@ const SEVA_PILLARS = [
   },
   { 
     id: 4, 
-    title: "Youth Empowerment", 
+    title: "Yuva", 
     description: "Focusing on spiritual growth, personal development, and mentorship to cultivate strong character, moral values, and clarity of purpose among the youth.", 
     icon: Sun, 
     color: "bg-orange-50 text-orange-600" 
