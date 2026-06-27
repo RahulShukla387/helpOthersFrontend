@@ -24,7 +24,7 @@ Google login are provided please login to check in detail
 
 **Backend API
 
-https://myprojectadiyuvanbackend-production.up.railway.app
+https://api.helpothers.space
 
 ---
 
@@ -82,7 +82,7 @@ Create a `.env` file in the root of the frontend project.
 
 Example:
 
-VITE_BACKEND_URL=https://myprojectadiyuvanbackend-production.up.railway.app
+VITE_BACKEND_URL=https://api.helpothers.space
 
 VITE_GOOGLE_CLIENT_ID=your_google_client_id
 
@@ -94,7 +94,7 @@ Clone the repository
 
 git clone https://github.com/RahulShukla387/helpOthersFrontend.git
 
-Navigate to the project directory => cd MyProjectAdiYuvanFrontend
+Navigate to the project directory => cd helpOhtersFrontend
 Install dependencies => npm install
 
 Run the development server  => npm run dev
