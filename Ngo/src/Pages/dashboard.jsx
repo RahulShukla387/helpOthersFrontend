@@ -39,8 +39,8 @@ const UPCOMING_SEVA = [
 
 
 const StatCard = ({img }) => (
-  <div className=" m-0.5 h-60 w-50 bg-white p-3 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-    <img className='h-50 w-50' src={img} alt="AdiYuvan" />
+  <div className=" m-0.5 h-60 w-full bg-white p-3 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+    <img className='h-[30vh] w-[80vw] mx-auto' src={img} alt="AdiYuvan" />
   </div>
 );
 
@@ -73,7 +73,7 @@ const volunteerNotification = useGlobalStore((state) => state.getNotificationVol
       <div className="flex-1 flex flex-col overflow-hidden relative">
         
         {/* Header */}
-        <header className="  h-20 bg-white/80 backdrop-blur-md border-b border-slate-200 flex items-center justify-around px-8 sticky top-0 z-10">
+        <header className="  h-20 bg-white/80 backdrop-blur-md border-b border-slate-200 flex items-center justify-around px-2 sticky top-0 z-10">
         <div className="flex items-center justify-around text-slate-400 bg-slate-100 px-4 rounded-lg w-[100%]" >
           <div className="flex items-center text-slate-400 bg-slate-100 px-4 rounded-lg w-96">
             <Search size={18}  />
@@ -124,12 +124,12 @@ const volunteerNotification = useGlobalStore((state) => state.getNotificationVol
         </header>
 
         {/* Dashboard Content */}
-        <main className="flex-1 overflow-y-auto p-8">
+        <main className="flex-1 overflow-y-auto p-2">
           <div className="max-w-7xl mx-auto">
 
                   {/* Volunteer and Issue Section */}
 
-    <div className="my-8 px-6 py-10 bg-slate-50 rounded-3xl border border-slate-100 shadow-sm text-center">
+    <div className="my-8 px-2 py-10 bg-slate-50 rounded-3xl border border-slate-100 shadow-sm text-center">
   {/* Welcome Header */}
   <div className="mb-4">
     <h1 className="text-2xl font-light text-slate-600 tracking-tight">
@@ -191,8 +191,8 @@ const volunteerNotification = useGlobalStore((state) => state.getNotificationVol
             {/* Welcome Section */}
             <div className="flex justify-between items-end mb-8">
               <div>
-                <h1 className="text-3xl font-bold text-slate-900">ADI-YUVAAN FOUNDATION</h1>
-                <p className="text-slate-500 mt-1">आशाओं की उड़ान, उम्मीदों की पहचान</p>
+                <h1 className="text-center text-3xl font-bold text-slate-900">ADI-YUVAAN FOUNDATION</h1>
+                <p className=" text-center text-slate-500 mt-1">आशाओं की उड़ान, उम्मीदों की पहचान</p>
               </div>
                
               <div className="text-right hidden sm:block">
