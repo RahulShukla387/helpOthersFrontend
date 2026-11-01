@@ -1,3 +1,9 @@
+> ### 🔗 Project Links & Architecture
+> * **Live Deployed Application:** [https://helpothers-five.vercel.app/]
+> * **Frontend Repository (React / Vite / Tailwind):** [https://github.com/RahulShukla387/helpOthersFrontend]
+> * **Backend API Repository (Node.js / Express / MongoDB):** [https://github.com/RahulShukla387/helpOthersBackend]
+> * **Ownership & License:** Personally and solely owned by Rahul Shukla under the MIT License.
+
 # HelpOthers – Frontend
 
 HelpOthers is a MERN stack platform designed to support NGOs by enabling users to explore initiatives and contribute through donations.  
